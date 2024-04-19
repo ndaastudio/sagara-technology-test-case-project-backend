@@ -9,7 +9,7 @@ class UserController {
   static async login(req, res) {
     try {
       const data = req.body;
-      const { error } = await Validation.loginUser(data);
+      const { error } = await Validation.login(data);
       if (error) {
         return ErrorResponse.BadRequest(res, error.details[0].message);
       }
