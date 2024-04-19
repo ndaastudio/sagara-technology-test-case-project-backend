@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create": "node src/helpers/helper.generator.js create",
-    "start": "node --watch src/index.js"
+    "start": "node --watch src/index.js",
+    "seed": "node src/database/seeder.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,13 @@
   },
   "dependencies": {
     "@prisma/client": "^5.12.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "joi": "^17.12.3",
     "jsonwebtoken": "^9.0.2"
+  },
+  "prisma": {
+    "schema": "src/database/prisma/schema.prisma"
   }
 }
